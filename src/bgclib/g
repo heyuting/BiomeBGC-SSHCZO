@@ -1,0 +1,20 @@
+photosynthesis.c:	g = psn->g;
+photosynthesis.c:	t = psn->t;
+photosynthesis.c:	Rd = psn->dlmr;
+photosynthesis.c:	Ca = psn->co2 * psn->pa / 1e6;
+photosynthesis.c:	if (psn->c3)
+photosynthesis.c:	psn->Ca = Ca;		
+photosynthesis.c:	psn->O2 = O2 = 0.21 * psn->pa;
+photosynthesis.c:	psn->Ko = Ko = Ko * 100.0;   /* mbar --> Pa */
+photosynthesis.c:	psn->Kc = Kc = Kc * 0.10;   /* ubar --> Pa */
+photosynthesis.c:	psn->gamma = gamma = 0.5 * 0.21 * Kc * psn->O2 / Ko;
+photosynthesis.c:	psn->Vmax = Vmax = psn->lnc * psn->flnr * fnr * act;
+photosynthesis.c:	psn->Jmax = Jmax = 2.1*Vmax;
+photosynthesis.c:	b = -Jmax - (psn->ppfd*pabs/ppe);
+photosynthesis.c:	c = Jmax * psn->ppfd*pabs/ppe;
+photosynthesis.c:	psn->J = J = (-b - sqrt(b*b - 4.0*a*c))/(2.0*a);
+photosynthesis.c:    psn->Av = Av = (-b + sqrt(det)) / (2.0*a);
+photosynthesis.c:	psn->Aj = Aj = (-b + sqrt(det)) / (2.0*a);
+photosynthesis.c:	psn->A = A;
+photosynthesis.c:	bgc_printf(BV_DIAG, "psn->A: %f, A: %f\n", psn->A, A);
+photosynthesis.c:	psn->Ci = Ca - (A/g);
